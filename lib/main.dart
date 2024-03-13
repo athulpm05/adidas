@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/ecomerce/Splash.dart';
-import 'package:flutter_application_2/workspace.dart';
 
 void main() {
   runApp(const MyApp());

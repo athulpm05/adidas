@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/ecomerce/Splash.dart';
 import 'package:flutter_application_2/ecomerce/welcome.dart';
 
 class Ad1 extends StatefulWidget {
