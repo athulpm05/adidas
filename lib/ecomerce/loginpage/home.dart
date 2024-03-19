@@ -1,5 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/ecomerce/loginpage/ratingbar.dart';
 import 'package:flutter_application_2/ecomerce/loginpage/trending1.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -9,6 +13,10 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  var like=true;
+    var pink=true;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,13 +57,33 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.grey,
                   child: Row(
                     children: [
-                      Container(
-                        height: 250,
-                        width: 400,
-                        child: Image.asset(
-                          "assets/images/images (22).jpeg",
-                          fit: BoxFit.cover,
+
+                      //stack
+
+                      Stack(
+                        children: [Container(
+                          height: 250,
+                          width: 400,
+                          child: Image.asset(
+                            "assets/images/images (22).jpeg",
+                            fit: BoxFit.cover,
+                          ),
                         ),
+                        
+                        const Padding(
+                          padding: EdgeInsets.only(top: 185,left: 45),
+                          child: Row(
+                            children: [
+                              Text("Sale ",
+                              style:TextStyle(color: Colors.white,fontSize: 40,fontWeight: FontWeight.bold) ,),
+                              Text("up to ",
+                              style:TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold) ,),
+                              Text("70% OFF ",
+                              style:TextStyle(color: Colors.white,fontSize: 45,fontWeight: FontWeight.bold) ,),
+                            ],
+                          ),
+                        )
+                        ]
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10),
@@ -136,9 +164,9 @@ class _HomepageState extends State<Homepage> {
                                     color: Color.fromARGB(255, 2, 211, 9),
                                   )),
                               Text(
-                                "6500 ",
+                                "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                               ),
-                              Text("/2097 ",
+                              Text("2097 ",
                                   style: TextStyle(fontWeight: FontWeight.bold))
                             ],
                           ),
@@ -207,9 +235,9 @@ class _HomepageState extends State<Homepage> {
                                       fontWeight: FontWeight.bold,
                                       color: Color.fromARGB(255, 2, 211, 9))),
                               Text(
-                                "6500 ",
+                                "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                               ),
-                              Text("/2097 ",
+                              Text("2097 ",
                                   style: TextStyle(fontWeight: FontWeight.bold))
                             ],
                           ),
@@ -275,9 +303,9 @@ class _HomepageState extends State<Homepage> {
                                       fontWeight: FontWeight.bold,
                                       color: Color.fromARGB(255, 2, 211, 9))),
                               Text(
-                                "6500 ",
+                                "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                               ),
-                              Text("/2097 ",
+                              Text("2097 ",
                                   style: TextStyle(fontWeight: FontWeight.bold))
                             ],
                           ),
@@ -344,9 +372,9 @@ class _HomepageState extends State<Homepage> {
                                       fontWeight: FontWeight.bold,
                                       color: Color.fromARGB(255, 2, 211, 9))),
                               Text(
-                                "6500 ",
+                                "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                               ),
-                              Text("/2097 ",
+                              Text("2097 ",
                                   style: TextStyle(fontWeight: FontWeight.bold))
                             ],
                           ),
@@ -412,9 +440,9 @@ class _HomepageState extends State<Homepage> {
                                       fontWeight: FontWeight.bold,
                                       color: Color.fromARGB(255, 2, 211, 9))),
                               Text(
-                                "6500 ",
+                                "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                               ),
-                              Text("/2097 ",
+                              Text("2097 ",
                                   style: TextStyle(fontWeight: FontWeight.bold))
                             ],
                           ),
@@ -480,9 +508,9 @@ class _HomepageState extends State<Homepage> {
                                       fontWeight: FontWeight.bold,
                                       color: Color.fromARGB(255, 2, 211, 9))),
                               Text(
-                                "6500 ",
+                                "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                               ),
-                              Text("/2097 ",
+                              Text("2097 ",
                                   style: TextStyle(fontWeight: FontWeight.bold))
                             ],
                           ),
@@ -582,14 +610,14 @@ class _HomepageState extends State<Homepage> {
                           },
                           child: Container(
                             color: Colors.grey[200],
-                            height: 150,
+                            height: 180,
                             width: 187,
                             child: Column(
                               children: [
-                                const Row(
+                                Row(
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.only(left: 3, top: 3),
+                                      padding: EdgeInsets.only(left: 3,),
                                       child: Text(
                                         "ADIDAS",
                                         style: TextStyle(
@@ -598,18 +626,25 @@ class _HomepageState extends State<Homepage> {
                                         ),
                                       ),
                                     ),
+
+                                   
+                                    //like button
+                                    
                                     Padding(
                                       padding:
-                                          EdgeInsets.only(left: 88, top: 3),
-                                      child: Icon(
-                                        Icons.favorite_border_sharp,
-                                        color: Colors.grey,
-                                      ),
+                                          EdgeInsets.only(left: 70,),
+                                      child: IconButton(
+                                        onPressed: (){
+                                          setState(() {
+                                            like = !like;
+                                          });
+                                        },
+                                        icon:like ? Icon(Icons.favorite_border_rounded) : Icon(Icons.favorite,color: Colors.red,))
                                     ),
                                   ],
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(top: 3, right: 10),
+                                 Padding(
+                                  padding: EdgeInsets.only(right: 10),
                                   child: Text(
                                     "Beastmode M Running Sho..",
                                     style: TextStyle(
@@ -617,8 +652,8 @@ class _HomepageState extends State<Homepage> {
                                     ),
                                   ),
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 5, top: 3),
+                                 Padding(
+                                  padding: EdgeInsets.only( top: 3,left: 5),
                                   child: Row(
                                     children: [
                                       Text("68% off ",
@@ -627,9 +662,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -648,33 +683,23 @@ class _HomepageState extends State<Homepage> {
                                             fontWeight: FontWeight.bold)),
                                   ),
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(top: 3, left: 4),
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_half_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                    ],
-                                  ),
+                               
+                                // rating design
+
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 40),
+
+                                  child: RatingBar.builder(
+                                    itemSize: 28,
+                                    allowHalfRating: true,
+                                    itemBuilder: (context, _)=>Icon(Icons.star,
+                                    color: Color.fromARGB(255, 6, 112, 9),),
+                                     onRatingUpdate: (rating){
+                                      
+                                     }),
                                 ),
+
+                                
                                 const Padding(
                                   padding: EdgeInsets.only(top: 3, right: 22),
                                   child: Text(
@@ -721,11 +746,11 @@ class _HomepageState extends State<Homepage> {
                           },
                           child: Container(
                             color: Colors.grey[200],
-                            height: 150,
+                            height: 180,
                             width: 200,
                             child: Column(
                               children: [
-                                const Row(
+                                Row(
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(left: 3, top: 3),
@@ -737,13 +762,17 @@ class _HomepageState extends State<Homepage> {
                                         ),
                                       ),
                                     ),
+                                    //like button
                                     Padding(
                                       padding:
-                                          EdgeInsets.only(left: 88, top: 3),
-                                      child: Icon(
-                                        Icons.favorite_border_sharp,
-                                        color: Colors.grey,
-                                      ),
+                                          EdgeInsets.only(left: 70,),
+                                      child: IconButton(
+                                        onPressed: (){
+                                          setState(() {
+                                            pink = !pink;
+                                          });
+                                        },
+                                        icon:pink ? Icon(Icons.favorite_border_rounded) : Icon(Icons.favorite,color: Colors.red,))
                                     ),
                                   ],
                                 ),
@@ -766,9 +795,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -776,7 +805,7 @@ class _HomepageState extends State<Homepage> {
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(right: 12, top: 3),
+                                      const EdgeInsets.only(right: 21, top: 3),
                                   child: Container(
                                     color: Color.fromARGB(219, 244, 178, 230),
                                     child: const Text(
@@ -787,32 +816,20 @@ class _HomepageState extends State<Homepage> {
                                             fontWeight: FontWeight.bold)),
                                   ),
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(top: 3, left: 4),
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                      Icon(
-                                        Icons.star_half_outlined,
-                                        color: Color.fromARGB(255, 1, 142, 6),
-                                      ),
-                                    ],
-                                  ),
+
+                                 // rating design
+
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 45),
+
+                                  child: RatingBar.builder(
+                                    itemSize: 28,
+                                    allowHalfRating: true,
+                                    itemBuilder: (context, _)=>Icon(Icons.star,
+                                    color: Color.fromARGB(255, 6, 112, 9),),
+                                     onRatingUpdate: (rating){
+                                      
+                                     }),
                                 ),
                                 const Padding(
                                   padding: EdgeInsets.only(top: 3, right: 32),
@@ -899,9 +916,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -1025,9 +1042,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -1158,9 +1175,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -1284,9 +1301,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -1417,9 +1434,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],
@@ -1543,9 +1560,9 @@ class _HomepageState extends State<Homepage> {
                                               color: Color.fromARGB(
                                                   255, 9, 151, 14))),
                                       Text(
-                                        "6500 ",
+                                        "6500 ",style: TextStyle(decoration: TextDecoration.lineThrough),
                                       ),
-                                      Text("/2097 ",
+                                      Text("2097 ",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                     ],

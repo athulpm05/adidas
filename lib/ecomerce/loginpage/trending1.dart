@@ -32,6 +32,7 @@ class _Trending1State extends State<Trending1> {
     return Scaffold(
                                 //appbar
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         toolbarHeight: 60,
         backgroundColor: Colors.black,
         actions: [
@@ -77,8 +78,8 @@ class _Trending1State extends State<Trending1> {
                                        children: [
                                          Text("68% off ",style: TextStyle(
                                           fontWeight: FontWeight.bold,color: Color.fromARGB(255, 2, 211, 9))),
-                                         Text("6500 ", ),
-                                         Text("/2097 ",style: TextStyle(fontWeight: FontWeight.bold))
+                                         Text("6500 ",style: TextStyle(decoration: TextDecoration.lineThrough), ),
+                                         Text("2097 ",style: TextStyle(fontWeight: FontWeight.bold))
                                      
                                        ],
                                      ),
@@ -195,8 +196,8 @@ class _Trending1State extends State<Trending1> {
                                          children: [
                                            Text("68% off ",style: TextStyle(
                                             fontWeight: FontWeight.bold,color: Color.fromARGB(255, 2, 211, 9))),
-                                           Text("6500 ", ),
-                                           Text("/2097 ",style: TextStyle(fontWeight: FontWeight.bold))
+                                           Text("6500 ",style: TextStyle(decoration: TextDecoration.lineThrough), ),
+                                           Text("2097 ",style: TextStyle(fontWeight: FontWeight.bold))
                                        
                                          ],
                                        ),
@@ -313,8 +314,8 @@ class _Trending1State extends State<Trending1> {
                                          children: [
                                            Text("68% off ",style: TextStyle(
                                             fontWeight: FontWeight.bold,color: Color.fromARGB(255, 2, 211, 9))),
-                                           Text("6500 ", ),
-                                           Text("/2097 ",style: TextStyle(fontWeight: FontWeight.bold))
+                                           Text("6500 ",style: TextStyle(decoration: TextDecoration.lineThrough), ),
+                                           Text("2097 ",style: TextStyle(fontWeight: FontWeight.bold))
                                        
                                          ],
                                        ),
@@ -433,8 +434,8 @@ class _Trending1State extends State<Trending1> {
                                          children: [
                                            Text("68% off ",style: TextStyle(
                                             fontWeight: FontWeight.bold,color: Color.fromARGB(255, 2, 211, 9))),
-                                           Text("6500 ", ),
-                                           Text("/2097 ",style: TextStyle(fontWeight: FontWeight.bold))
+                                           Text("6500 ",style: TextStyle(decoration: TextDecoration.lineThrough), ),
+                                           Text("2097 ",style: TextStyle(fontWeight: FontWeight.bold))
                                        
                                          ],
                                        ),
@@ -553,8 +554,8 @@ class _Trending1State extends State<Trending1> {
                                          children: [
                                            Text("68% off ",style: TextStyle(
                                             fontWeight: FontWeight.bold,color: Color.fromARGB(255, 2, 211, 9))),
-                                           Text("6500 ", ),
-                                           Text("/2097 ",style: TextStyle(fontWeight: FontWeight.bold))
+                                           Text("6500 ",style: TextStyle(decoration: TextDecoration.lineThrough), ),
+                                           Text("2097 ",style: TextStyle(fontWeight: FontWeight.bold))
                                        
                                          ],
                                        ),

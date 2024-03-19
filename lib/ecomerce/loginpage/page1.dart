@@ -20,7 +20,7 @@ class _P1State extends State<P1> {
   List tabwidget=[
       Homepage(),
       Wishlist(),
-      Not(),
+      
       Personal(),
     
   ];
@@ -28,6 +28,7 @@ class _P1State extends State<P1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         toolbarHeight: 60,
         backgroundColor: Colors.black,
         actions: [
@@ -51,9 +52,7 @@ class _P1State extends State<P1> {
           color: Colors.pink,),
           label: "Favourate",),
 
-          BottomNavigationBarItem(icon: Icon(Icons.notification_important,
-          color: Colors.black,),
-          label: "Notification"),
+          
 
           BottomNavigationBarItem(icon: Icon(Icons.account_circle, 
           color: Colors.black,),
