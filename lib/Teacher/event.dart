@@ -27,7 +27,9 @@ class _Event1State extends State<Event1> {
                     //icon button
                     Padding(
                       padding: const EdgeInsets.only(left: 5),
-                      child: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios,size: 30,weight: 25,)),
+                      child: IconButton(onPressed: (){
+                        
+                      }, icon: Icon(Icons.arrow_back_ios,size: 30,weight: 25,)),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 120),
@@ -138,36 +140,39 @@ class _Event1State extends State<Event1> {
               //sizedbox and TextFormField
           
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 160,
+                padding: const EdgeInsets.only(top: 10),
+                child: Container(
+                  height: 130,
                   width: 350,
-                  child: TextFormField(
-                    decoration: InputDecoration(border: OutlineInputBorder()),
-                
-                  ),
+                  decoration:BoxDecoration(border: Border.all(color:
+                   Color.fromARGB(255, 148, 141, 226)),
+                   borderRadius: BorderRadius.circular(5)
+                   ),
                 ),
               ),
               
               //inkwell button
-              InkWell(
-                  onTap: (){
-                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>Upcoming1()));
-                  },
-                   child: Container(
-                    height: 60,
-                    width: 350,
-                    child: Center(
-                      child: Text("Submit",style: 
-                      TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color: Colors.white),),
-                    ),
-                    decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Color.fromARGB(255, 32, 92, 182)
-                    )
-                    
-                    ),
-                 ),
+              Padding(
+                padding: const EdgeInsets.only(top: 56),
+                child: InkWell(
+                    onTap: (){
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Upcoming1()));
+                    },
+                     child: Container(
+                      height: 60,
+                      width: 350,
+                      child: Center(
+                        child: Text("Submit",style: 
+                        TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color: Colors.white),),
+                      ),
+                      decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color.fromARGB(255, 32, 92, 182)
+                      )
+                      
+                      ),
+                   ),
+              ),
               
             ],
           ),

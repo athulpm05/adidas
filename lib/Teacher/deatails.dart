@@ -28,12 +28,9 @@ class _DeatailState extends State<Deatail> {
               Text("Photos")
       
             ]),
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: true,
           actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 140),
-            child: Icon(Icons.arrow_back_ios_new,weight: 100,),
-          ),
+          
           Padding(
             padding: const EdgeInsets.only(right: 165),
             child: Text("Detail",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w800)),
