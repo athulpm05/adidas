@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/ecomerce/loginpage/contact.dart';
 import 'package:flutter_application_2/ecomerce/loginpage/trending1.dart';
 import 'package:flutter_application_2/ecomerce/welcome.dart';
 
@@ -79,6 +80,18 @@ class _PersonalState extends State<Personal> {
                      Icon(Icons.settings),
                   
                       TextButton(onPressed: (){}, child: Text("Settings",style:
+                       TextStyle(color: Colors.black,fontSize: 18),)),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                  
+                     Icon(Icons.call),
+                  
+                      TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Contactno()));
+
+                      }, child: Text("Contact",style:
                        TextStyle(color: Colors.black,fontSize: 18),)),
                     ],
                   ),

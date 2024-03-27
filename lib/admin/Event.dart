@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Eventadmin extends StatefulWidget {
-  const Eventadmin({super.key});
+class Adminevent extends StatefulWidget {
+  const Adminevent({super.key});
 
   @override
-  State<Eventadmin> createState() => _EventadminState();
+  State<Adminevent> createState() => _AdmineventState();
 }
 
-class _EventadminState extends State<Eventadmin> {
+class _AdmineventState extends State<Adminevent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.amber,
-        height: 50,
-        width: 40,
-      ),
+      
     );
   }
 }
